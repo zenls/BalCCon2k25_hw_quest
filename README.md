@@ -39,7 +39,7 @@ SRAM:  0x2000_0000 -> 0x0005_0000   ( 20 Kbytes)
     - `(gdb) monitor reset halt` – reset + halt MCU  
     ```
 
-## GDB cheet sheet
+## GDB cheat sheet
 
 ### Navigation
 - `ni` – next instruction  
