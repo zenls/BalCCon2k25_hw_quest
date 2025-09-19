@@ -32,14 +32,16 @@ SRAM:  0x2000_0000 -> 0x0005_0000   ( 20 Kbytes)
     > reset run
     ```
 
-# ARM GDB Cheatsheet (`arm-none-eabi-gdb`)
+3. Connect GDB to Openicd
+    ```sh
+    - `arm-none-eabi-gdb` – start GDB  
+    - `(gdb) target remote localhost:3333` – connect to OpenOCD GDB server  
+    - `(gdb) monitor reset halt` – reset + halt MCU  
+    ```
 
-## Start & Connect
-- `arm-none-eabi-gdb` – start GDB  
-- `(gdb) target remote localhost:3333` – connect to OpenOCD GDB server  
-- `(gdb) monitor reset halt` – reset + halt MCU  
+## GDB cheet sheet
 
-## Navigation
+### Navigation
 - `ni` – next instruction  
 - `si` – step instruction  
 - `j *addr` – jump to address  
@@ -48,15 +50,15 @@ SRAM:  0x2000_0000 -> 0x0005_0000   ( 20 Kbytes)
 - `f` – show current frame/PC  
 - `q` – quit  
 
-## Breakpoints
+### Breakpoints
 - `b *addr` – set breakpoint at address  
 - `b n` – delete breakpoint n  
 - `i b` – list breakpoints  
 
-## Data & Registers
+### Data & Registers
 - `set $r0 = 1` – write to register r0  
 - `x/10x addr` – show 10 words at address  
 - `display/10i $pc-0x5` – show ASM around PC  
 
-## Aliases
+### Aliases
 - `alias rr = monitor reset halt` – quick halt
