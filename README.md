@@ -18,7 +18,7 @@ SRAM:  0x2000_0000 -> 0x0005_0000   ( 20 Kbytes)
 
 ## STM32 OpenOCD Read & Flash
 
-1. Start OpenOCD:
+1. Start OpenOCD (reconnect if failed):
     ```sh
     openocd -f interface/stlink.cfg -f target/stm32f1x.cfg
     ```
