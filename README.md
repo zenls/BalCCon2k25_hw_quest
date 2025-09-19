@@ -31,3 +31,32 @@ SRAM:  0x2000_0000 -> 0x0005_0000   ( 20 Kbytes)
     > flash write_image erase golden.bin 0x08000000
     > reset run
     ```
+
+# ARM GDB Cheatsheet (`arm-none-eabi-gdb`)
+
+## Start & Connect
+- `arm-none-eabi-gdb` – start GDB  
+- `(gdb) target remote localhost:3333` – connect to OpenOCD GDB server  
+- `(gdb) monitor reset halt` – reset + halt MCU  
+
+## Navigation
+- `ni` – next instruction  
+- `si` – step instruction  
+- `j *addr` – jump to address  
+- `fin` – finish current function  
+- `c` – continue execution  
+- `f` – show current frame/PC  
+- `q` – quit  
+
+## Breakpoints
+- `b *addr` – set breakpoint at address  
+- `b n` – delete breakpoint n  
+- `i b` – list breakpoints  
+
+## Data & Registers
+- `set $r0 = 1` – write to register r0  
+- `x/10x addr` – show 10 words at address  
+- `display/10i $pc-0x5` – show ASM around PC  
+
+## Aliases
+- `alias rr = monitor reset halt` – quick halt
