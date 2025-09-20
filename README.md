@@ -16,7 +16,7 @@ Flash: 0x0800_0000 -> 0x0020_0000   (128 Kbytes)
 SRAM:  0x2000_0000 -> 0x0005_0000   ( 20 Kbytes)
 ```
 
-For adition information you can check [this]([url](https://docs.google.com/presentation/d/1cdKOSSeUj7wjjbe4AN3h3LsnMcJIFCdbmSi1o4zBcXU/edit?slide=id.p#slide=id.p)) presrntdtion - before with 51 slide
+For adition information you can check [this](https://docs.google.com/presentation/d/1cdKOSSeUj7wjjbe4AN3h3LsnMcJIFCdbmSi1o4zBcXU/edit?slide=id.p#slide=id.p) presrntdtion - before with 51 slide
 
 ## STM32 OpenOCD Read & Flash
 
